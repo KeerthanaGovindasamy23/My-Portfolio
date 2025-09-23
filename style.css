@@ -306,3 +306,9 @@ body {
     max-height: 200px; /* Adjust height as needed */
     padding: 25px;
 }
+/* Styling for icons in skills section */
+.skill-item p i,
+.tool-list li i {
+    margin-right: 8px;
+    color: #007bff;
+}
