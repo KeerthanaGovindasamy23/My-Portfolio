@@ -260,3 +260,49 @@ body {
 .btn-hire-me:hover {
     background-color: #000;
 }
+/* Education Section Styling */
+.accordion {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.accordion-item {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.accordion-header {
+    background-color: #f8f9fa;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #e9ecef;
+}
+
+.accordion-content {
+    background-color: #fff;
+    padding: 0 25px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Adjust height as needed */
+    padding: 25px;
+}
