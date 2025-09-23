@@ -1,0 +1,127 @@
+/* General Body and Main Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use Flexbox for sidebar and main content layout */
+}
+
+.main-content {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+    margin-left: 300px; /* Adjust based on sidebar width */
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 300px;
+    position: fixed; /* Keep sidebar in place on scroll */
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-right: 1px solid #e9ecef;
+}
+
+.sidebar .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.sidebar .profile p {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar .navigation li a {
+    display: block;
+    padding: 12px 20px;
+    color: #6c757d;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .navigation li a:hover,
+.sidebar .navigation li a.active {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    /* Use a background image and overlay for the full-screen effect */
+    background-image: url('path-to-your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.btn-download-cv {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* About Section */
+.about-me {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    width: 200px;
+    margin: 10px;
+}
