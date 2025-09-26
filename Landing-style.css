@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing-container {
+    width: 100%;
+    max-width: 600px; /* Keep content centered and readable */
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header/Navigation */
+.landing-header {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: right;
+}
+
+.landing-nav a {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.landing-nav a:hover {
+    color: #007bff;
+}
+
+/* Profile Section */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff; /* Accent border */
+    margin-bottom: 20px;
+}
+
+.main-name {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.designation {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.link-box:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.link-box i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Footer */
+.landing-footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #999;
+}
