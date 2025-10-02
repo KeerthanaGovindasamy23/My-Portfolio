@@ -1,0 +1,319 @@
+/**
+ * Import Fonts: 'Playfair Display' for names/titles, 'Poppins' for body/navigation/details
+ *
+ * @format
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+/* Pastel Colors */
+:root {
+  --color-background: #f0f8ff; /* Alice Blue */
+  --color-accent-pastel: #b4cbf0; /* Pale Cornflower */
+  --color-text-dark: #222222;
+  --color-text-subtle: #6c757d;
+  --color-accent-dark: #0056b3; /* Dark Blue for Hover */
+}
+
+/* Base and Layout Setup */
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  background-color: var(--color-background);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-container {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------ */
+/* HEADER & NAVIGATION */
+/* ------------------------------------------------ */
+
+.landing-header {
+  width: 100%;
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto;
+  margin-left: -5%;
+  padding-left: 5%;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  border-left: 5px solid var(--color-accent-pastel);
+  padding-left: 10px;
+}
+
+.landing-nav a {
+  text-decoration: none;
+  color: var(--color-text-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-left: 40px;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+/* Dark Blue Hover Color */
+.landing-nav a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Remove Underline from HOME (active link) */
+.landing-nav .active-nav {
+  color: var(--color-accent-dark);
+  border-bottom: none;
+}
+
+/* ------------------------------------------------ */
+/* CORE LAYOUT: HERO SECTION */
+/* ------------------------------------------------ */
+
+.hero-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 50px;
+}
+
+.hero-text-content {
+  margin-left: 10%;
+  width: 45%;
+  max-width: 600px;
+  text-align: left;
+  padding: 0;
+}
+
+.intro-text-small {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-text-subtle);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Increased margin below to separate from name */
+  margin: 0 0 25px 0;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+/* Pseudo-element for the small horizontal line under "MY NAME IS" */
+.intro-text-small::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  width: 15px;
+  height: 1px;
+  background-color: var(--color-text-subtle);
+  transform: translateY(-50%);
+}
+
+.main-name {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: var(--color-text-dark);
+  /* Increased margin below to separate from designation */
+  margin: 0 0 15px 0;
+  line-height: 1.1;
+}
+
+.designation {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+  font-weight: 400;
+  text-transform: capitalize;
+  /* Increased margin below to separate from contact info */
+  margin-bottom: 35px;
+  font-style: normal;
+}
+
+/* Contact Details (Focused on tight layout) */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  /* Reduced gap as the email icon is now in social-links */
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* NEW: Placeholder for vertical space (where the email text used to be) */
+.email-placeholder {
+  height: 1.2rem; /* Matches the approximate height of the email text line */
+  margin: 0;
+  padding: 0;
+}
+
+/* Existing contact-item and icon classes are now largely redundant but kept for safety */
+.contact-item {
+  display: none; /* Hiding the old contact item if it still exists */
+}
+.icon {
+  display: none; /* Hiding the old icon style */
+}
+
+/* Social Links Container (Inline alignment for all icons) */
+.social-links {
+  display: flex;
+  align-items: center;
+  /* Spacing between all 4 icons (Mail, LinkedIn, LeetCode, GitHub) */
+  gap: 30px;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+/* Style for the larger, clickable social icons (logos only) */
+.icon-large {
+  font-size: 1.8rem;
+  /* Default icon color: Black */
+  color: var(--color-text-dark);
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for social logos */
+.social-links a:hover .icon-large {
+  /* Hover icon color: Dark Blue */
+  color: var(--color-accent-dark);
+}
+
+/* ------------------------------------------------ */
+/* BACKGROUND CIRCLE & PHOTO */
+/* ------------------------------------------------ */
+
+/* Top Right Partial Circle (Pastel Blue) */
+.landing-container::before {
+  content: "";
+  position: absolute;
+  top: -600px;
+  right: -600px;
+  width: 1300px;
+  height: 1300px;
+  background-color: rgba(175, 207, 240, 0.4);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* CHANGE: Increased photo size by roughly 10% (original 428px -> new 470px) */
+.hero-photo-container {
+  flex-shrink: 0;
+  width: 470px; /* Increased size */
+  height: 470px; /* Increased size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: -15px;
+  margin-right: 20%;
+  z-index: 5;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--color-accent-pastel);
+  display: block;
+}
+
+.landing-footer {
+  display: none;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  /* ... (Mobile styles remain the same for responsiveness) ... */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    order: 2;
+    text-align: center; /* Center alignment for mobile */
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Remove the dash on mobile when text is centered */
+  .intro-text-small::after {
+    content: none;
+  }
+
+  /* Center the contact information block on mobile */
+  .contact-info {
+    align-items: center;
+  }
+
+  /* Ensure the placeholder is still respected on mobile for space */
+  .email-placeholder {
+    height: 1.2rem;
+  }
+
+  /* Center the email item on mobile */
+  .contact-item {
+    justify-content: center;
+  }
+
+  /* Center the social links container on mobile */
+  .social-links {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjust photo size for mobile */
+  .hero-photo-container {
+    width: 275px; /* Slightly larger on mobile as well */
+    height: 275px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    margin-top: 0;
+    order: 1;
+  }
+
+  .landing-container::before,
+  .landing-container::after {
+    display: none;
+  }
+}
