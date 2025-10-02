@@ -1,0 +1,757 @@
+/**
+ * General Body and Main Layout
+ *
+ * @format
+ */
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* REQUEST: Contrasting Pastel Dual-Color Background */
+    background: linear-gradient(135deg, #f0f8ff 0%, #f8f8ff 100%);
+}
+
+.main-content {
+    flex-grow: 1;
+    /* This margin accounts for the 300px sidebar width */
+    margin-left: 300px;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 300px;
+    position: fixed;
+    height: 100vh;
+    background-color: #f8f9fa; /* Reverted to original */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 1px solid #e9ecef; /* Reverted to original */
+}
+
+/* Request 3: Center alignment for profile */
+.sidebar .profile {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.sidebar .profile img {
+    /* UPDATED: Increased photo size */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    /* Border color reverted to none (only border-radius remains) */
+}
+
+.sidebar .profile h2 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 0;
+}
+
+.sidebar .profile p {
+    font-size: 0.7rem;
+    color: #666; /* Reverted to original */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.sidebar .navigation {
+    width: 100%;
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-block-start: 0;
+}
+
+.sidebar .navigation li a {
+    display: block;
+    padding: 6px 20px;
+    color: #6c757d; /* Reverted to original */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .navigation li a:hover,
+.sidebar .navigation li a.active {
+    background-color: #e9ecef;
+    color: #007bff; /* Reverted to original */
+}
+
+/* Request 2: Copyright and Coding Profiles (Positioned correctly at the bottom of the sidebar) */
+.sidebar .footer-links {
+    width: 100%;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.sidebar .copyright {
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+.sidebar .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.sidebar .profile-links a {
+    color: #007bff; /* Reverted to original */
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar .profile-links a i {
+    margin-right: 5px;
+}
+
+/* --- General Section Styling --- */
+.section {
+    padding: 40px 40px;
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #6c757d; /* Reverted to original */
+    margin-bottom: 5px;
+}
+
+/* --- About Section --- */
+.about-me {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Request 1: About Me Slideshow Styling */
+.about-slideshow-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #e9ecef; /* Reverted to original */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Reverted to original */
+    padding: 30px;
+    overflow: hidden;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.about-slideshow-slide {
+    display: none;
+    text-align: center;
+    width: 100%;
+    animation: fade 1.5s;
+}
+
+.about-slideshow-slide.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-slideshow-slide h4 {
+    font-size: 1.4rem;
+    color: #333; /* Reverted to original */
+    margin-bottom: 15px;
+}
+
+.about-slideshow-slide p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* --- NEW Coding Profiles Styles (Connect with Me Online) --- */
+.coding-profiles-banner {
+    /* Outer div container */
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+}
+
+.coding-profiles-banner h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.profile-icons-row {
+    /* Inner div holding the actual links */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.profile-icons-row a {
+    /* Defines a specific area for the image to maintain icon size/click area */
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    transition: transform 0.3s;
+}
+
+/* NEW RULE: Style the Image inside the link */
+.profile-icons-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* NEW RULE: Update the hover effect to lift the link container */
+.profile-icons-row a:hover {
+    transform: translateY(-8px);
+}
+
+/* --- EDUCATION SECTION (Timeline Items) --- */
+.timeline-container {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    width: 2px; /* Reverted to original */
+    background-color: #e9ecef; /* Reverted to original */
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -3px;
+}
+
+#education .timeline-item {
+    padding: 10px 0 10px 45px;
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff; /* Reverted to original */
+    border-radius: 50%;
+    border: 2px solid white; /* Reverted to original */
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#education .timeline-content h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#education .education-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding-top: 0;
+}
+
+#education .timeline-item.active .education-details {
+    max-height: 200px; /* Reverted to original */
+    padding-top: 10px;
+    /* Removed the accent border-left */
+}
+
+/* --- SKILLS SECTION --- */
+.skills-container {
+    max-width: 800px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+}
+
+.skill-item h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.skill-item span {
+    font-size: 0.8rem;
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+/* Request 5: Color for skill bars */
+.progress-fill {
+    height: 100%;
+    background-color: #007bff; /* Reverted to original default */
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* Specific colors for different skill bars (Example colors) */
+.skill-item:nth-child(1) .progress-fill {
+    background-color: #ff6347;
+} /* Tomato (Original) */
+.skill-item:nth-child(2) .progress-fill {
+    background-color: #4682b4;
+} /* SteelBlue (Original) */
+.skill-item:nth-child(3) .progress-fill {
+    background-color: #3cb371;
+} /* MediumSeaGreen (Original) */
+.skill-item:nth-child(4) .progress-fill {
+    background-color: #ffd700;
+} /* Gold (Original) */
+.skill-item:nth-child(5) .progress-fill {
+    background-color: #9370db;
+} /* MediumPurple (Original) */
+.skill-item:nth-child(6) .progress-fill {
+    background-color: #ff7f50;
+} /* Coral (Original) */
+.skill-item:nth-child(7) .progress-fill {
+    background-color: #00ced1;
+} /* DarkTurquoise (Original) */
+
+/* Tools and Libraries Section */
+.tools-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 60px;
+    padding: 20px 0;
+    border-radius: 8px;
+}
+
+.tool-list h3 {
+    font-size: 1.8rem;
+    color: #007bff; /* Reverted to original */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 5px;
+}
+
+.tool-list li {
+    font-size: 1.2rem;
+    color: #495057;
+    margin-bottom: 12px;
+}
+/* Removed the tool-list li i color change */
+
+/* --- ACHIEVEMENT AND HONOURS (Accordion) --- */
+.accordion {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.accordion-item {
+    border: 1px solid #e9ecef; /* Reverted to original */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    /* Removed custom box-shadow */
+}
+
+.accordion-header {
+    background-color: #f8f9fa;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+/* Removed custom active accordion header styling */
+
+.accordion-content {
+    background-color: #fff;
+    padding: 0 25px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Reverted to original */
+    padding: 25px;
+}
+
+/* --- Certifications Section --- */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.certification-box {
+    height: 105px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    opacity: 1 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+    /* Removed custom hover effect */
+}
+
+/* --- DIFFERENT COLORS for EACH Certification Box (Pastel Palette) --- */
+/* Kept as they were part of your provided original code */
+.certification-box:nth-child(8n + 1) {
+    background-color: #e6f3ff;
+}
+.certification-box:nth-child(8n + 2) {
+    background-color: #e8fce4;
+}
+.certification-box:nth-child(8n + 3) {
+    background-color: #fff4e1;
+}
+.certification-box:nth-child(8n + 4) {
+    background-color: #f7d2d8;
+}
+.certification-box:nth-child(8n + 5) {
+    background-color: #ffe6e6;
+}
+.certification-box:nth-child(8n + 6) {
+    background-color: #e4fcfb;
+}
+.certification-box:nth-child(8n + 7) {
+    background-color: #f1f8ed;
+}
+.certification-box:nth-child(8n + 8) {
+    background-color: #fcebeb;
+}
+.certification-box:nth-child(8n + 9) {
+    background-color: #e9f5ff;
+}
+.certification-box:nth-child(8n + 10) {
+    background-color: #fef0e4;
+}
+
+.certification-box i {
+    font-size: 2.2rem;
+    color: #007bff; /* Reverted to original */
+    margin-bottom: 10px;
+}
+.certification-box h4 {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.3;
+    color: #212529;
+}
+.certification-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    opacity: 1 !important;
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-section {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 180px;
+}
+
+/* Project Item Pastel Colors (Kept original scheme) */
+.project-item:nth-child(8n + 1) {
+    background-color: #f7d2d8;
+}
+.project-item:nth-child(8n + 2) {
+    background-color: #d1f2e1;
+}
+.project-item:nth-child(8n + 3) {
+    background-color: #f2e3d3;
+}
+.project-item:nth-child(8n + 4) {
+    background-color: #d8e5f7;
+}
+.project-item:nth-child(8n + 5) {
+    background-color: #e1d3f2;
+}
+.project-item:nth-child(8n + 6) {
+    background-color: #d2f7f1;
+}
+.project-item:nth-child(8n + 7) {
+    background-color: #f7d8d2;
+}
+.project-item:nth-child(8n + 8) {
+    background-color: #e5f7d2;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #333;
+    opacity: 1;
+    background: none;
+    padding: 0;
+}
+
+.project-overlay h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333; /* Reverted to original */
+    text-shadow: none !important;
+}
+
+.project-overlay p {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    color: #666; /* Reverted to original */
+}
+
+/* Remove hover effect on image/overlay */
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+.project-item:hover img {
+    opacity: 0.03;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    max-width: 800px;
+    margin-top: 20px;
+    min-height: 100vh;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info .info-item i {
+    font-size: 1.5rem; /* Reverted to original */
+    color: #007bff; /* Reverted to original */
+}
+
+.contact-info .info-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Removed custom form background/shadow */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #e9ecef; /* Reverted to original */
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-send-message {
+    background-color: #007bff; /* Reverted to original */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+/* Removed custom hover for button */
+
+/* --- Responsive Styles --- */
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 0;
+    }
+    .sidebar .footer-links {
+        position: relative;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .tools-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .about-slideshow-container {
+        padding: 20px;
+        margin: 30px auto;
+        max-width: 90%;
+    }
+    /* Updated mobile styles for the new coding profile section */
+    .profile-icons-row {
+        gap: 30px;
+    }
+    .profile-icons-row a {
+        font-size: 2.5rem;
+    }
+    /* Mobile collapse for certifications */
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- NEW Footer/Copyright Styles (Moved to Main Content) --- */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+    background-color: #f8f9fa; /* Reverted to original */
+    margin-top: 40px;
+}
+
+.main-footer .copyright p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Added final fix to eliminate any remaining duplicated text from pseudo-elements */
+.project-overlay h4::before,
+.project-overlay h4::after,
+.project-overlay p::before,
+.project-overlay p::after {
+    content: none !important;
+}
