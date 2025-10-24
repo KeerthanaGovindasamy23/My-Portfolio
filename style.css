@@ -259,59 +259,87 @@ html {
   display: none;
 }
 
-/* --- Media Queries for Mobile Responsiveness --- */
+/* ------------------------------------------------ */
+/* MOBILE RESPONSIVENESS (Max Width: 768px) */
+/* ------------------------------------------------ */
 @media (max-width: 768px) {
-  /* ... (Mobile styles remain the same for responsiveness) ... */
+  /* Header: Stack logo and nav, center everything */
+  .landing-header {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .logo-container {
+    margin: 0 auto 15px auto;
+    padding-left: 0;
+    /* Adjusting for the border style to look good when centered */
+    margin-left: 0; 
+  }
+
+  .landing-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .landing-nav a {
+    margin: 0 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Hero Section: Stack content vertically and center text */
   .hero-section {
     flex-direction: column;
     text-align: center;
     padding: 40px 0;
+    margin-bottom: 20px;
   }
 
+  /* Photo Container: Smaller size and positioned first */
+  .hero-photo-container {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    margin-top: 0;
+    order: 1; /* Photo on top */
+  }
+
+  /* Text Content: Full width, centered, and positioned second */
   .hero-text-content {
     max-width: 100%;
-    order: 2;
-    text-align: center; /* Center alignment for mobile */
+    order: 2; /* Text below photo */
+    text-align: center;
     width: 90%;
     margin: 0 auto;
   }
+  
+  .main-name {
+    font-size: 2.8rem; /* Slightly smaller name on mobile */
+  }
+  
+  .designation {
+    font-size: 1.3rem; /* Slightly smaller designation */
+  }
 
-  /* Remove the dash on mobile when text is centered */
+  /* Intro Text: Remove the dash when text is centered */
   .intro-text-small::after {
     content: none;
   }
 
-  /* Center the contact information block on mobile */
+  /* Contact Info: Center the social links block */
   .contact-info {
     align-items: center;
   }
 
-  /* Ensure the placeholder is still respected on mobile for space */
-  .email-placeholder {
-    height: 1.2rem;
-  }
-
-  /* Center the email item on mobile */
-  .contact-item {
-    justify-content: center;
-  }
-
-  /* Center the social links container on mobile */
+  /* Social Links: Center the icons */
   .social-links {
     justify-content: center;
     align-items: center;
   }
 
-  /* Adjust photo size for mobile */
-  .hero-photo-container {
-    width: 275px; /* Slightly larger on mobile as well */
-    height: 275px;
-    margin-bottom: 30px;
-    margin-right: 0;
-    margin-top: 0;
-    order: 1;
-  }
-
+  /* Background: Hide large background circle on mobile */
   .landing-container::before,
   .landing-container::after {
     display: none;
